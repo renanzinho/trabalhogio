@@ -1,9 +1,9 @@
 class Node:
 
-	def __init__(self, data, other=None, index=0):
-		self.__data  	= data
-		self.__nextNode = nextNode
-		self.__index 	= index
+	def __init__(self, data, nextNode=None, previousNode=None):
+		self.__data  		= data
+		self.__nextNode 	= nextNode
+		self.__previousNode = previousNode
 	
 	@property
 	def data(self):
@@ -22,11 +22,9 @@ class Node:
 		self.__nextNode = new
 
 	@property
-	def index(self):
-		return self.__index
+	def previousNode(self):
+		return self.__previousNode
 
-	@index.setter
-	def index(self, new):
-		self.__index = new
-
-	
+	@previousNode.setter
+	def previousNode(self, new):
+		self.__previousNode = new
