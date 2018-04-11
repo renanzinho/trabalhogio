@@ -25,7 +25,7 @@ class Candidato:
             nomeMunicipioNascimento,
             situacaoPosPleito,
             situacaoCandidatura,
-            bens):
+            bens=None):
 
     	self.__anoEleicao 				= anoEleicao
         self.__uf 						= uf
@@ -274,6 +274,4 @@ Resumo dos bens:
 
     def __eq__(self, other):
     	return self.__cpf == other.cpf and self.__nomeCandidato == other.nomeCandidato
-
-
 

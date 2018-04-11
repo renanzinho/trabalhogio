@@ -118,6 +118,14 @@ class DoubleLinkedList:
 			tempNode = tempNode.nextNode
 		return tempNode
 
+	def searchId(self, item);
+		i = 0
+		tempNode = self.__head
+
+		while i < self.__count and tempNode.data.idCandidato != item:
+			tempNode = tempNode.nextNode
+		return tempNode
+
 	def __str__(self):
 		tempNode = self.__head
 		i = 0
@@ -127,6 +135,9 @@ class DoubleLinkedList:
 			tempNode = tempNode.nextNode 
 			i += 1
 		return string[:-2]
+
+	def __repr__(self):
+		return str(self)
 
 
 
